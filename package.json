@@ -1,0 +1,28 @@
+{
+  "name": "dashboard-api",
+  "version": "1.0.0",
+  "description": "learning back-end #04",
+  "main": "src/app.ts",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node ./dist/main.js",
+    "dev": "nodemon",
+    "dev:inspect": "nodemon -e ts,json --exec node --inspect=localhost:9222 -r ts-node/register src/main.ts",
+    "lint": "eslint ./src/**",
+    "test": "jest",
+    "test:e2e": "jest --config jest.e2e.config.ts --coverage",
+    "generate": "prisma generate",
+    "lint:fix": "eslint ./src/** --fix",
+    "build": "tsc"
+  },
+  "author": "ShotAlex",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "tslog": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "nodemon": "^2.0.16"
+  }
+}
